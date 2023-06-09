@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
   branca: '#FFF8F2',
-  rosa: '#E66767'
+  rosa: '#E66767',
+  bege: '#ffebd9'
 }
 
 const GlobalCss = createGlobalStyle`
@@ -17,6 +18,7 @@ const GlobalCss = createGlobalStyle`
   body{
     background-color: ${cores.branca};
     color: ${cores.rosa};
+    margin-bottom: 40px;
   }
 
   .container{

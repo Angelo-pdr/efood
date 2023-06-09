@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import imgBack from '../../assets/images/header.png'
+import { cores } from '../../styles/index'
 
 export const HeaderBar = styled.header`
-  background-color: #ffebd9;
+  background-color: ${cores.bege};
   width: 100%;
   height: 384px;
-  padding 1rem 0px;
+  padding-top: 1.25rem;
   margin-bottom: 2rem;
 
   .container {
@@ -15,6 +15,6 @@ export const HeaderBar = styled.header`
 `
 
 export const Title = styled.h1`
-  margin-top: 9rem;
+  margin-top: 8.7812rem;
   font-size: 36px;
 `
