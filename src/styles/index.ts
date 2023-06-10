@@ -18,7 +18,6 @@ const GlobalCss = createGlobalStyle`
   body{
     background-color: ${cores.branca};
     color: ${cores.rosa};
-    margin-bottom: 40px;
   }
 
   .container{

@@ -15,27 +15,26 @@ export const Card = styled.div`
 export const AreaImg = styled.div`
   width: 100%;
   height: 100%;
-
+  margin-bottom: -5px;
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 `
 
 export const Infos = styled.div`
   position: absolute;
   top: 0;
-  right: 1rem;
+  right: 0.5rem;
 `
 
 export const AreaText = styled.div`
   border: 1px solid ${cores.rosa};
   border-top: none;
-  max-width: 464px;
   width: 100%;
-  height: 100%;
-  margin-top: -8px;
+  height: auto;
   padding: 8px;
+
   img {
     width: 100%;
     height: 100%;

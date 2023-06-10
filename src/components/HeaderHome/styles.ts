@@ -4,9 +4,9 @@ import { cores } from '../../styles/index'
 export const HeaderBar = styled.header`
   background-color: ${cores.bege};
   width: 100%;
-  height: 384px;
-  padding-top: 1.25rem;
-  margin-bottom: 2rem;
+  max-height: 384px;
+  height: 100%;
+  padding: 1.25rem 0px;
 
   .container {
     text-align: center;

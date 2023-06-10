@@ -6,6 +6,7 @@ export const TagContainer = styled.div<Props>`
   background-color: ${cores.rosa};
   margin-top: 1rem;
   margin-bottom: 8px;
+  margin-right: 8px;
   padding 4px 6px;
   color: #fff;
   font-weight: bold;

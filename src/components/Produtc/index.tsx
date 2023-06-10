@@ -8,31 +8,35 @@ import {
   Infos
 } from './styles'
 import star from '../../assets/images/star.png'
-import food from '../../assets/images/macarrao.png'
 import Tag from '../Tag'
+import Food from '../../models/Food'
 
-const Produtc = () => (
-  <Card>
+const Produtc = ({
+  description,
+  evaluation,
+  id,
+  image,
+  infos,
+  title
+}: Food) => (
+  <Card id={`${id}`}>
     <AreaImg>
-      <img src={food} alt="comida" />
+      <img src={image} alt="comida" />
       <Infos>
-        <Tag>teste</Tag>
+        {infos.map((info) => (
+          <Tag key={info}>{info}</Tag>
+        ))}
       </Infos>
     </AreaImg>
     <AreaText>
       <TitleList>
-        <Title>Hioki Sushi</Title>
+        <Title>{title}</Title>
         <Value>
-          <p>4.9</p>
+          <p>{evaluation}</p>
           <img src={star} alt="estrela" />
         </Value>
       </TitleList>
-      <p>
-        Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis
-        frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega
-        rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão
-        sem sair do lar com nosso delivery!
-      </p>
+      <p>{description}</p>
       <Tag>Saiba mais</Tag>
     </AreaText>
   </Card>

@@ -1,7 +1,7 @@
 import { HeaderBar, Title } from './styles'
 import logo from '../../assets/images/logo.png'
 
-const Header = () => (
+const HeaderHome = () => (
   <HeaderBar>
     <div className="container">
       <img src={logo} alt="logo" />
@@ -10,4 +10,4 @@ const Header = () => (
   </HeaderBar>
 )
 
-export default Header
+export default HeaderHome

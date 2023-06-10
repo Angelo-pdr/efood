@@ -2,20 +2,20 @@ class Food {
   title: string
   evaluation: number
   description: string
-  category: string[]
+  infos: string[]
   image: string
   id: number
 
   constructor(
     title: string,
-    category: string[],
+    infos: string[],
     evaluation: number,
     description: string,
     image: string,
     id: number
   ) {
     this.title = title
-    this.category = category
+    this.infos = infos
     this.evaluation = evaluation
     this.description = description
     this.image = image
