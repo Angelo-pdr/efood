@@ -24,7 +24,9 @@ const Produtc = ({
       <img src={image} alt="comida" />
       <Infos>
         {infos.map((info) => (
-          <Tag key={info}>{info}</Tag>
+          <Tag type="tag" key={info}>
+            {info}
+          </Tag>
         ))}
       </Infos>
     </AreaImg>
@@ -37,7 +39,9 @@ const Produtc = ({
         </Value>
       </TitleList>
       <p>{description}</p>
-      <Tag>Saiba mais</Tag>
+      <Tag type="link" to="/perfil">
+        Saiba mais
+      </Tag>
     </AreaText>
   </Card>
 )
