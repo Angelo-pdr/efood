@@ -9,9 +9,9 @@ import {
 } from './styles'
 import star from '../../assets/images/star.png'
 import Tag from '../Tag'
-import Food from '../../models/Food'
+import Food from '../../models/Restaurant'
 
-const Produtc = ({
+const Restaurant = ({
   description,
   evaluation,
   id,
@@ -46,4 +46,4 @@ const Produtc = ({
   </Card>
 )
 
-export default Produtc
+export default Restaurant

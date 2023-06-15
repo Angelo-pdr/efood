@@ -1,71 +1,60 @@
-import ProdutcList from '../../components/ProdutcList'
-import Header from '../../components/HeaderHome'
+import ProdutcList from '../../components/ProductList'
+import Header from '../../components/HeaderPefil'
 import Footer from '../../components/footer'
 import Food from '../../models/Food'
 
-import macarrao from '../../assets/images/macarrao.png'
-import sushi from '../../assets/images/sushi.png'
+import pizza from '../../assets/images/pizza.png'
+import apresentacao from '../../assets/images/apresentacao.png'
 
 const cardapio: Food[] = [
   {
     id: 1,
-    infos: ['Destaque da semana', 'Japonesa'],
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!s',
-    title: 'Hioki Sushi',
-    image: `${sushi}`,
-    evaluation: 4.9
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    image: `${pizza}`
   },
   {
     id: 2,
-    infos: ['Italiana'],
     description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'La Dolce Vita Trattoria',
-    image: `${macarrao}`,
-    evaluation: 4.6
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    image: `${pizza}`
   },
   {
     id: 3,
-    infos: ['Italiana'],
     description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'La Dolce Vita Trattoria',
-    image: `${macarrao}`,
-    evaluation: 4.6
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    image: `${pizza}`
   },
   {
     id: 4,
-    infos: ['Italiana'],
     description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'La Dolce Vita Trattoria',
-    image: `${macarrao}`,
-    evaluation: 4.6
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    image: `${pizza}`
   },
   {
     id: 5,
-    infos: ['Italiana'],
     description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'La Dolce Vita Trattoria',
-    image: `${macarrao}`,
-    evaluation: 4.6
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    image: `${pizza}`
   },
   {
     id: 6,
-    infos: ['Italiana'],
     description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'La Dolce Vita Trattoria',
-    image: `${macarrao}`,
-    evaluation: 4.6
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    image: `${pizza}`
   }
 ]
 
 const Perfil = () => (
   <>
     <Header />
+    <img src={apresentacao} alt="" />
     <ProdutcList foods={cardapio} />
     <Footer />
   </>

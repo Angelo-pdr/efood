@@ -1,7 +1,7 @@
-import ProdutcList from '../../components/ProdutcList'
+import ProdutcList from '../../components/RestaurantList'
 import Header from '../../components/HeaderHome'
 import Footer from '../../components/footer'
-import Food from '../../models/Food'
+import Food from '../../models/Restaurant'
 
 import macarrao from '../../assets/images/macarrao.png'
 import sushi from '../../assets/images/sushi.png'
