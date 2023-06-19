@@ -4,22 +4,27 @@ import { cores } from '../../styles/index'
 export const Card = styled.div`
   max-width: 472px;
   width: 100%;
-  height: 100%;
+  max-height: 398px;
   font-size: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media (max-width: 840px) {
+    min-width: 100%;
+    max-height: 280px;
+  }
 `
 export const AreaImg = styled.div`
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
-  margin-bottom: -5px;
-  img {
-    width: 100%;
-    height: auto;
-  }
+  height: 217px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 `
 
 export const Infos = styled.div`
@@ -44,6 +49,9 @@ export const AreaText = styled.div`
     font-size: 14px;
     text-align: justify;
     max-width: 456px;
+    @media (max-width: 840px) {
+      font-size: 10px;
+    }
   }
 `
 
@@ -61,6 +69,7 @@ export const Value = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   p {
     font-size: 18px;
     font-weight: bold;

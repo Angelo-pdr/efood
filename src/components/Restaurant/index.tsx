@@ -7,7 +7,7 @@ import {
   AreaText,
   Infos
 } from './styles'
-import star from '../../assets/images/star.png'
+import star from '../../asserts/images/star.png'
 import Tag from '../Tag'
 import Food from '../../models/Restaurant'
 
@@ -20,8 +20,7 @@ const Restaurant = ({
   title
 }: Food) => (
   <Card id={`${id}`}>
-    <AreaImg>
-      <img src={image} alt="comida" />
+    <AreaImg style={{ backgroundImage: `url(${image})` }}>
       <Infos>
         {infos.map((info) => (
           <Tag type="tag" key={info}>

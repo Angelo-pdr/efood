@@ -1,5 +1,5 @@
 import { HeaderBar, Title } from './styles'
-import logo from '../../assets/images/logo.png'
+import logo from '../../asserts/images/logo.png'
 
 const HeaderHome = () => (
   <HeaderBar>

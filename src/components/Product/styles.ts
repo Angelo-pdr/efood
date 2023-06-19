@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { cores } from '../../styles/index'
 
 export const Card = styled.div`
-  max-width: 320pxpx;
+  max-width: 320px;
   width: 100%;
   max-height: 338px;
   height: 100%;
@@ -15,10 +15,14 @@ export const Card = styled.div`
   position: relative;
   background-color: ${cores.rosa};
   color: ${cores.branca};
+
+  @media (max-width: 840px) {
+    min-width: 100%;
+  }
 `
 export const AreaImg = styled.div`
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   img {
     width: 100%;
     height: auto;

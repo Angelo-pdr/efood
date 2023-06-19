@@ -7,7 +7,7 @@ export const cores = {
 }
 
 const GlobalCss = createGlobalStyle`
-*{
+  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,6 +19,8 @@ const GlobalCss = createGlobalStyle`
   body{
     background-color: ${cores.branca};
     color: ${cores.rosa};
+    max-width: 100%;
+    height: 100vh;
   }
 
   .container{

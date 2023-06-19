@@ -3,8 +3,9 @@ import Header from '../../components/HeaderPefil'
 import Footer from '../../components/footer'
 import Food from '../../models/Food'
 
-import pizza from '../../assets/images/pizza.png'
-import apresentacao from '../../assets/images/apresentacao.png'
+import pizza from '../../asserts/images/pizza.png'
+import apresentacao from '../../asserts/images/banner.png'
+import Hero from '../../components/Hero'
 
 const cardapio: Food[] = [
   {
@@ -54,7 +55,7 @@ const cardapio: Food[] = [
 const Perfil = () => (
   <>
     <Header />
-    <img src={apresentacao} alt="" />
+    <Hero BannerImg={apresentacao} />
     <ProdutcList foods={cardapio} />
     <Footer />
   </>

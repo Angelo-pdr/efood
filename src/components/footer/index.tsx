@@ -1,6 +1,6 @@
 import { FooterBar, Title } from './styles'
-import logo from '../../assets/images/logo.png'
-import redes from '../../assets/images/redes_sociais.png'
+import logo from '../../asserts/images/logo.png'
+import redes from '../../asserts/images/redes_sociais.png'
 
 const Footer = () => (
   <FooterBar>

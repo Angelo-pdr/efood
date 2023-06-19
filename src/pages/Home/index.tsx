@@ -3,8 +3,8 @@ import Header from '../../components/HeaderHome'
 import Footer from '../../components/footer'
 import Food from '../../models/Restaurant'
 
-import macarrao from '../../assets/images/macarrao.png'
-import sushi from '../../assets/images/sushi.png'
+import macarrao from '../../asserts/images/macarrao.png'
+import sushi from '../../asserts/images/sushi.png'
 
 const cardapio: Food[] = [
   {
