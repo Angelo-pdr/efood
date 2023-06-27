@@ -1,25 +1,18 @@
-import Food from '../../models/Restaurant'
+import { RestaurantProps } from '../../pages/Home'
 import Restaurant from '../Restaurant'
 import { Container, List } from './styles'
 
 type Props = {
-  foods: Food[]
+  restaurantes: RestaurantProps[]
 }
 
-const ProdutcList = ({ foods }: Props) => (
+const ProdutcList = ({ restaurantes }: Props) => (
   <Container>
     <div className="container">
       <List>
-        {foods.map((food) => (
-          <li key={food.id}>
-            <Restaurant
-              description={food.description}
-              evaluation={food.evaluation}
-              id={food.id}
-              image={food.image}
-              infos={food.infos}
-              title={food.title}
-            />
+        {restaurantes.map((restaurante) => (
+          <li key={restaurante.id}>
+            <Restaurant restaurante={restaurante} />
           </li>
         ))}
       </List>

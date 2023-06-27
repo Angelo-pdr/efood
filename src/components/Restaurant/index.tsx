@@ -9,36 +9,36 @@ import {
 } from './styles'
 import star from '../../asserts/images/star.png'
 import Tag from '../Tag'
-import Food from '../../models/Restaurant'
+import { RestaurantProps } from '../../pages/Home'
 
-const Restaurant = ({
-  description,
-  evaluation,
-  id,
-  image,
-  infos,
-  title
-}: Food) => (
-  <Card id={`${id}`}>
-    <AreaImg style={{ backgroundImage: `url(${image})` }}>
+type Props = {
+  restaurante: RestaurantProps
+}
+
+const Restaurant = ({ restaurante }: Props) => (
+  <Card>
+    <AreaImg style={{ backgroundImage: `url(${restaurante.capa})` }}>
       <Infos>
-        {infos.map((info) => (
-          <Tag type="tag" key={info}>
-            {info}
-          </Tag>
-        ))}
+        {restaurante.destacado ? (
+          <>
+            <Tag type="tag">Destaque da semana</Tag>
+            <Tag type="tag">{restaurante.tipo}</Tag>
+          </>
+        ) : (
+          <Tag type="tag">{restaurante.tipo}</Tag>
+        )}
       </Infos>
     </AreaImg>
     <AreaText>
       <TitleList>
-        <Title>{title}</Title>
+        <Title>{restaurante.titulo}</Title>
         <Value>
-          <p>{evaluation}</p>
+          <p>{restaurante.avaliacao}</p>
           <img src={star} alt="estrela" />
         </Value>
       </TitleList>
-      <p>{description}</p>
-      <Tag type="link" to="/perfil">
+      <p>{restaurante.descricao}</p>
+      <Tag type="link" to={`perfil/${restaurante.id}`}>
         Saiba mais
       </Tag>
     </AreaText>

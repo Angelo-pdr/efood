@@ -1,16 +1,19 @@
+import { RestaurantProps } from '../../pages/Home'
 import { Banner, Container } from './styles'
 
-export type Props = {
-  BannerImg: string
+type Props = {
+  restaurante: RestaurantProps
 }
 
-const Hero = ({ BannerImg }: Props) => (
-  <Banner style={{ backgroundImage: `url(${BannerImg})` }}>
-    <Container>
-      <p>Italiana</p>
-      <h3>La Dolce Vita Trattoria</h3>
-    </Container>
-  </Banner>
-)
+const Hero = ({ restaurante }: Props) => {
+  return (
+    <Banner style={{ backgroundImage: `url(${restaurante.capa})` }}>
+      <Container>
+        <p>{restaurante.tipo}</p>
+        <h3>{restaurante.titulo}</h3>
+      </Container>
+    </Banner>
+  )
+}
 
 export default Hero

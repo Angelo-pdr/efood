@@ -11,6 +11,8 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  text-decoration: none;
+  color: ${cores.rosa};
 
   @media (max-width: 840px) {
     min-width: 100%;

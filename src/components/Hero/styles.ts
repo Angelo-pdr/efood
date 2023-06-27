@@ -7,7 +7,7 @@ export const Banner = styled.div`
   height: 278px;
   padding-top: 24px;
   padding-bottom: 33px;
-  background-size: length;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: ${cores.branca};
