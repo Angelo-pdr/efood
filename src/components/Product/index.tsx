@@ -1,4 +1,6 @@
-import { Card, Title, AreaText, Button } from './styles'
+import { CardapioProps } from '../../pages/Perfil'
+import Button from '../Button'
+import { Card, Title, AreaText } from './styles'
 
 export type Props = {
   cardapio: {
@@ -9,9 +11,10 @@ export type Props = {
     descricao: string
     porcao: string
   }
+  setModal: (item: CardapioProps) => void
 }
 
-const Produtc = ({ cardapio }: Props) => {
+const Produtc = ({ cardapio, setModal }: Props) => {
   const getDescricao = (descricao: string) => {
     if (descricao.length > 150) {
       return descricao.slice(0, 145) + '...'
@@ -25,7 +28,9 @@ const Produtc = ({ cardapio }: Props) => {
         <Title>{cardapio.nome}</Title>
         <p>{getDescricao(cardapio.descricao)}</p>
       </AreaText>
-      <Button>Adicionar ao carrinho</Button>
+      <Button onClick={() => setModal(cardapio)}>
+        <p>Adicionar ao carrinho</p>
+      </Button>
     </Card>
   )
 }

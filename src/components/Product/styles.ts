@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles/index'
+import { ButtonContainer } from '../Button/styles'
 
 export const Card = styled.div`
   width: 100%;
@@ -14,6 +15,10 @@ export const Card = styled.div`
   position: relative;
   background-color: ${cores.rosa};
   color: ${cores.branca};
+
+  ${ButtonContainer} {
+    width: 100%;
+  }
 
   img {
     width: 100%;
@@ -40,16 +45,4 @@ export const AreaText = styled.div`
 export const Title = styled.h1`
   padding-top: 8px;
   font-size: 18px;
-`
-
-export const Button = styled.button`
-  display: block;
-  border: none;
-  width: 100%;
-  padding: 4px 0px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: ${cores.branca};
-  color: ${cores.rosa};
 `
