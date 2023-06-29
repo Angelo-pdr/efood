@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles/index'
+import { ButtonLink, TagContainer } from '../Tag/styles'
 
 export const Card = styled.div`
   max-width: 472px;
@@ -13,6 +14,7 @@ export const Card = styled.div`
   position: relative;
   text-decoration: none;
   color: ${cores.rosa};
+  background-color: ${cores.branca};
 
   @media (max-width: 840px) {
     min-width: 100%;
@@ -31,8 +33,13 @@ export const AreaImg = styled.div`
 
 export const Infos = styled.div`
   position: absolute;
-  top: 0;
-  right: 0.5rem;
+  top: 16px;
+  right: 16px;
+
+  ${TagContainer} {
+    width: 124px;
+    height: 26px;
+  }
 `
 
 export const AreaText = styled.div`
@@ -51,9 +58,14 @@ export const AreaText = styled.div`
     font-size: 14px;
     text-align: justify;
     max-width: 456px;
+    margin-bottom: 1rem;
     @media (max-width: 840px) {
       font-size: 10px;
     }
+  }
+
+  ${ButtonLink} {
+    margin: 0px;
   }
 `
 
@@ -67,6 +79,7 @@ export const TitleList = styled.div`
   justify-content: space-between;
   margin-bottom: 1rem;
 `
+
 export const Value = styled.div`
   display: flex;
   align-items: center;

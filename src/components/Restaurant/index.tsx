@@ -22,7 +22,9 @@ const Restaurant = ({ restaurante }: Props) => (
         {restaurante.destacado ? (
           <>
             <Tag type="tag">Destaque da semana</Tag>
-            <Tag type="tag">{restaurante.tipo}</Tag>
+            <Tag type="tag" size="small">
+              {restaurante.tipo}
+            </Tag>
           </>
         ) : (
           <Tag type="tag">{restaurante.tipo}</Tag>
