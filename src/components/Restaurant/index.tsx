@@ -10,6 +10,7 @@ import {
 import star from '../../asserts/images/star.png'
 import Tag from '../Tag'
 import { RestaurantProps } from '../../pages/Home'
+import Button from '../Button'
 
 type Props = {
   restaurante: RestaurantProps
@@ -21,13 +22,17 @@ const Restaurant = ({ restaurante }: Props) => (
       <Infos>
         {restaurante.destacado ? (
           <>
-            <Tag type="tag">Destaque da semana</Tag>
-            <Tag type="tag" size="small">
-              {restaurante.tipo}
-            </Tag>
+            <Button>
+              <p>Destaque da semana</p>
+            </Button>
+            <Button>
+              <p>{restaurante.tipo}</p>
+            </Button>
           </>
         ) : (
-          <Tag type="tag">{restaurante.tipo}</Tag>
+          <Button>
+            <p>{restaurante.tipo}</p>
+          </Button>
         )}
       </Infos>
     </AreaImg>

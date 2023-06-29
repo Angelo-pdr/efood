@@ -51,7 +51,9 @@ export const Container = styled.div`
   }
 
   p {
+    z-index: 1;
     font-size: 32px;
+    font-weight: 100;
 
     @media (max-width: 840px) {
       font-size: 1.5rem;
