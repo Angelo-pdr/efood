@@ -94,6 +94,7 @@ export const Value = styled.div`
   p {
     font-size: 18px;
     font-weight: bold;
+    margin: 0px;
   }
 
   img {
