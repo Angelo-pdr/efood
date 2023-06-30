@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { cores } from '../../styles/index'
 
 export const HeaderBar = styled.header`
   background-size: cover;
@@ -9,7 +8,6 @@ export const HeaderBar = styled.header`
   height: 100%;
   padding-top: 40px;
   padding-bottom: 62px;
-  margin-bottom: 80px;
 
   @media (max-width: 840px) {
     padding: 20px 0px;

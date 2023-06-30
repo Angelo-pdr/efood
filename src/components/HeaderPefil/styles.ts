@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { cores } from '../../styles/index'
 
 export const HeaderBar = styled.header`
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: ${cores.bege};
   width: 100%;
   max-height: 186px;

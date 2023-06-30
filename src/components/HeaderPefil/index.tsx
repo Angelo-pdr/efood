@@ -1,8 +1,9 @@
 import { HeaderBar, Title } from './styles'
 import logo from '../../asserts/images/logo.png'
+import banner from '../../asserts/images/Vector.png'
 
 const HeaderPerfil = () => (
-  <HeaderBar>
+  <HeaderBar style={{ backgroundImage: `url(${banner})` }}>
     <div className="container">
       <Title>Restaurantes</Title>
       <img src={logo} alt="logo" />
