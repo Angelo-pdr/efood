@@ -13,7 +13,8 @@ export const Container = styled.div`
 export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  column-gap: 80px;
+  row-gap: 48px;
 
   @media (max-width: 840px) {
     grid-template-columns: 1fr 1fr;

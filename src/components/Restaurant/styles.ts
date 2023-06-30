@@ -64,7 +64,7 @@ export const AreaText = styled.div`
     font-size: 14px;
     text-align: justify;
     max-width: 456px;
-    margin-bottom: 1rem;
+    margin: 1rem 0px;
     @media (max-width: 840px) {
       font-size: 10px;
     }
@@ -83,7 +83,6 @@ export const TitleList = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
 `
 
 export const Value = styled.div`
