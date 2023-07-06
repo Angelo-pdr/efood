@@ -4,38 +4,24 @@ import Footer from '../../components/footer'
 
 import Hero from '../../components/Hero'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { RestaurantProps } from '../Home'
-
-export type CardapioProps = {
-  foto: string
-  preco: number
-  id: number
-  nome: string
-  descricao: string
-  porcao: string
-}
+import { useGetFeatureRevenueQuery } from '../../services/api'
+import Cart from '../../components/Cart'
 
 const Perfil = () => {
   const { id } = useParams()
 
-  const [restaurante, setRestaurante] = useState<RestaurantProps>()
+  const { data: revenue } = useGetFeatureRevenueQuery(id as string)
 
-  useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
-      .then((response) => response.json())
-      .then((res) => setRestaurante(res))
-  }, [id])
-
-  if (!restaurante) {
-    return <h1>Carregando...</h1>
+  if (!revenue) {
+    return <h1>carregando</h1>
   }
 
   return (
     <>
+      <Cart />
       <Header />
-      <Hero restaurante={restaurante} />
-      <ProdutcList restaurante={restaurante.cardapio} />
+      <Hero restaurante={revenue} />
+      <ProdutcList restaurantes={revenue.cardapio} />
       <Footer />
     </>
   )

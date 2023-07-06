@@ -1,22 +1,34 @@
 import { useState } from 'react'
-import { CardapioProps } from '../../pages/Perfil'
+import { CardapioProps } from '../../pages/Home'
 import Product from '../Product'
 import { AreaText, Container, List, Modal, ModalContent } from './styles'
 import Button from '../Button'
 import close from '../../asserts/images/close.png'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../store'
+import { open, add } from '../../store/reduce/cart'
 
 type Props = {
-  restaurante: CardapioProps[]
+  restaurantes: CardapioProps[]
+  restaurant?: CardapioProps
 }
 
-const ProdutcList = ({ restaurante }: Props) => {
+const ProdutcList = ({ restaurantes, restaurant }: Props) => {
   const [modal, setModal] = useState<CardapioProps>()
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(add(restaurant!))
+    setModal(undefined)
+    dispatch(open())
+  }
+
   return (
     <>
       <Container>
         <div className="container">
           <List>
-            {restaurante.map((restaurante) => (
+            {restaurantes.map((restaurante) => (
               <li key={restaurante.id}>
                 <Product setModal={setModal} cardapio={restaurante} />
               </li>
@@ -34,7 +46,7 @@ const ProdutcList = ({ restaurante }: Props) => {
                 <h2>{modal.nome}</h2>
                 <p className="descricao">{modal.descricao}</p>
                 <p>Serve: {modal.porcao}</p>
-                <Button>
+                <Button onClick={addToCart}>
                   <p>Adicionar ao carrinho - R$ {modal.preco}</p>
                 </Button>
               </AreaText>

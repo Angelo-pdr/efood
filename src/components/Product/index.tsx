@@ -1,4 +1,4 @@
-import { CardapioProps } from '../../pages/Perfil'
+import { CardapioProps } from '../../pages/Home'
 import Button from '../Button'
 import { Card, Title, AreaText } from './styles'
 

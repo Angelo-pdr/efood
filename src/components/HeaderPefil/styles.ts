@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { cores } from '../../styles/index'
+import Button from '../Button'
+import { ButtonContainer } from '../Button/styles'
 
 export const HeaderBar = styled.header`
   background-size: cover;
@@ -28,6 +30,11 @@ export const HeaderBar = styled.header`
       width: 90%;
       text-align: center;
     }
+  }
+
+  ${ButtonContainer} {
+    background-color: transparent;
+    font-size: 18px;
   }
 `
 

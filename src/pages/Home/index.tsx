@@ -1,7 +1,16 @@
 import RestaurantList from '../../components/RestaurantList'
 import Header from '../../components/HeaderHome'
 import Footer from '../../components/footer'
-import { useEffect, useState } from 'react'
+import { useGetFeatureRestaurantQuery } from '../../services/api'
+
+export type CardapioProps = {
+  id: number
+  foto: string
+  preco: number
+  nome: string
+  descricao: string
+  porcao: string
+}
 
 export type RestaurantProps = {
   id: number
@@ -11,30 +20,20 @@ export type RestaurantProps = {
   avaliacao: number
   descricao: string
   capa: string
-  cardapio: [
-    {
-      foto: string
-      preco: number
-      id: number
-      nome: string
-      descricao: string
-      porcao: string
-    }
-  ]
+  cardapio: CardapioProps[]
 }
 
 const Home = () => {
-  const [restaurantes, setRestaurantes] = useState<RestaurantProps[]>([])
+  const { data: restaurant } = useGetFeatureRestaurantQuery()
 
-  useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((response) => response.json())
-      .then((res) => setRestaurantes(res))
-  }, [])
+  if (!restaurant) {
+    return <h1>carregando</h1>
+  }
+
   return (
     <>
       <Header />
-      <RestaurantList restaurantes={restaurantes} />
+      <RestaurantList restaurantes={restaurant} />
       <Footer />
     </>
   )
