@@ -4,15 +4,18 @@ import Footer from '../../components/footer'
 import { useGetFeatureRestaurantQuery } from '../../services/api'
 
 export type CardapioProps = {
-  id: number
   foto: string
   preco: number
+  id: number
   nome: string
   descricao: string
   porcao: string
 }
 
 export type RestaurantProps = {
+  foto: string | undefined
+  nome: string | undefined
+  preco: number
   id: number
   titulo: string
   destacado: boolean

@@ -16,12 +16,13 @@ const CartSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action: PayloadAction<CardapioProps>) => {
-      const game = state.items.find((item) => item.id === action.payload.id)
-      if (!game) {
+      const pedido = state.items.find((item) => item.id === action.payload.id)
+      if (!pedido) {
         state.items.push(action.payload)
       } else {
-        alert('O game já esta no carrinho')
+        alert('O pedido já esta no carrinho')
       }
+      console.log(state.items)
     },
     remover: (state, action: PayloadAction<number>) => {
       state.items = state.items.filter((item) => item.id !== action.payload)
@@ -35,5 +36,5 @@ const CartSlice = createSlice({
   }
 })
 
-export const { add, close, open } = CartSlice.actions
+export const { add, close, open, remover } = CartSlice.actions
 export default CartSlice.reducer

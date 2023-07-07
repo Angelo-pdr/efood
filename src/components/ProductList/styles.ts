@@ -60,6 +60,9 @@ export const ModalContent = styled.div`
   height: 100%;
   position: relative;
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 810px) {
     max-height: 460px;
@@ -109,10 +112,10 @@ export const AreaText = styled.div`
   }
   ${ButtonContainer} {
     margin-top: 1rem;
-    width: 218px;
-
-    @media (max-width: 810px) {
-      width: 100%;
+    max-width: 218px;
+    width: 100%;
+    @media (max-width: 650px) {
+      min-width: 100%;
     }
   }
 `

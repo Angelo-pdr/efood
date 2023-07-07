@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { cores } from '../../styles/index'
-import Button from '../Button'
 import { ButtonContainer } from '../Button/styles'
 
 export const HeaderBar = styled.header`
@@ -35,6 +34,10 @@ export const HeaderBar = styled.header`
   ${ButtonContainer} {
     background-color: transparent;
     font-size: 18px;
+
+    @media (max-width: 650px) {
+      font-size: 12px;
+    }
   }
 `
 

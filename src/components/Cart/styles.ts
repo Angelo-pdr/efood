@@ -59,6 +59,7 @@ export const CartItem = styled.div`
   background-color: ${cores.bege};
   display: flex;
   position: relative;
+  margin-bottom: 1rem;
 
   img {
     width: 80px;
