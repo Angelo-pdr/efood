@@ -1,19 +1,19 @@
-import { FooterBar, Title } from './styles'
+import * as S from './styles'
 import logo from '../../asserts/images/logo.png'
 import redes from '../../asserts/images/redes_sociais.png'
 
 const Footer = () => (
-  <FooterBar>
+  <S.FooterBar>
     <div className="container">
       <img src={logo} alt="logo" />
       <img src={redes} alt="redes socias" className="redes" />
-      <Title>
+      <S.Title>
         A efood é uma plataforma para divulgação de estabelecimentos, a
         responsabilidade pela entrega, qualidade dos produtos é toda do
         estabelecimento contratado.
-      </Title>
+      </S.Title>
     </div>
-  </FooterBar>
+  </S.FooterBar>
 )
 
 export default Footer

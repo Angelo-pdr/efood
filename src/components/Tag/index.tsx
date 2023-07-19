@@ -1,4 +1,4 @@
-import { TagContainer, ButtonLink } from './styles'
+import * as S from './styles'
 
 export type Props = {
   type: 'tag' | 'link'
@@ -10,15 +10,15 @@ export type Props = {
 const Tag = ({ children, to, type, size = 'small' }: Props) => {
   if (type === 'tag') {
     return (
-      <TagContainer type="tag" size={size}>
+      <S.TagContainer type="tag" size={size}>
         {children}
-      </TagContainer>
+      </S.TagContainer>
     )
   }
   return (
-    <ButtonLink to={to as string} type="link" size={size}>
+    <S.ButtonLink to={to as string} type="link" size={size}>
       {children}
-    </ButtonLink>
+    </S.ButtonLink>
   )
 }
 

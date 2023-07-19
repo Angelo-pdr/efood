@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
 export const Container = styled.header`
@@ -51,8 +51,8 @@ export const Modal = styled.div`
 `
 
 export const ModalContent = styled.div`
-  background-color: ${cores.rosa};
-  color: ${cores.branca};
+  background-color: ${colors.pink};
+  color: ${colors.white};
   z-index: 1;
   max-width: 1024px;
   width: 100%;

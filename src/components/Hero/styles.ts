@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Banner = styled.div`
   position: relative;
@@ -10,7 +10,7 @@ export const Banner = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: ${cores.branca};
+  color: ${colors.white};
 
   @media (max-width: 840px) {
     padding: 1rem 0px;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles/index'
+import { colors } from '../../styles/index'
 import { ButtonLink } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
 
@@ -14,8 +14,8 @@ export const Card = styled.div`
   justify-content: center;
   position: relative;
   text-decoration: none;
-  color: ${cores.rosa};
-  background-color: ${cores.branca};
+  color: ${colors.pink};
+  background-color: ${colors.white};
 
   @media (max-width: 840px) {
     min-width: 100%;
@@ -26,8 +26,8 @@ export const Card = styled.div`
     max-width: 121px;
     height: 26px;
     font-size: 12px;
-    background-color: ${cores.rosa};
-    color: ${cores.branca};
+    background-color: ${colors.pink};
+    color: ${colors.white};
     padding: 6px 4px;
     margin-left: 0.5rem;
   }
@@ -49,7 +49,7 @@ export const Infos = styled.div`
 `
 
 export const AreaText = styled.div`
-  border: 1px solid ${cores.rosa};
+  border: 1px solid ${colors.pink};
   border-top: none;
   width: 100%;
   height: auto;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles/index'
+import { colors } from '../../styles/index'
 import { ButtonContainer } from '../Button/styles'
 
 export const Card = styled.div`
@@ -13,8 +13,8 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: ${cores.rosa};
-  color: ${cores.branca};
+  background-color: ${colors.pink};
+  color: ${colors.white};
 
   ${ButtonContainer} {
     width: 100%;

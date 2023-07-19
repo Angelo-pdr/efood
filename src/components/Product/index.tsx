@@ -1,6 +1,6 @@
 import { CardapioProps } from '../../pages/Home'
 import Button from '../Button'
-import { Card, Title, AreaText } from './styles'
+import * as S from './styles'
 
 export type Props = {
   cardapio: {
@@ -22,16 +22,16 @@ const Produtc = ({ cardapio, setModal }: Props) => {
   }
 
   return (
-    <Card id={`${cardapio.id}`}>
+    <S.Card id={`${cardapio.id}`}>
       <img src={cardapio.foto} alt="comida" />
-      <AreaText>
-        <Title>{cardapio.nome}</Title>
+      <S.AreaText>
+        <S.Title>{cardapio.nome}</S.Title>
         <p>{getDescricao(cardapio.descricao)}</p>
-      </AreaText>
+      </S.AreaText>
       <Button onClick={() => setModal(cardapio)}>
         <p>Adicionar ao carrinho</p>
       </Button>
-    </Card>
+    </S.Card>
   )
 }
 

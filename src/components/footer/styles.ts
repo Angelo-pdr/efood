@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { cores } from '../../styles/index'
+import { colors } from '../../styles/index'
 
 export const FooterBar = styled.footer`
-  background-color: ${cores.bege};
+  background-color: ${colors.beige};
   width: 100%;
   max-height: 384px;
   height: 100%;

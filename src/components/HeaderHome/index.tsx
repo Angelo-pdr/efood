@@ -1,14 +1,14 @@
-import { HeaderBar, Title } from './styles'
+import * as S from './styles'
 import logo from '../../asserts/images/logo.png'
 import banner from '../../asserts/images/Vector.png'
 
 const HeaderHome = () => (
-  <HeaderBar style={{ backgroundImage: `url(${banner})` }}>
+  <S.HeaderBar style={{ backgroundImage: `url(${banner})` }}>
     <div className="container">
       <img src={logo} alt="logo" />
-      <Title>Viva experiências gastronômicas no conforto da sua casa</Title>
+      <S.Title>Viva experiências gastronômicas no conforto da sua casa</S.Title>
     </div>
-  </HeaderBar>
+  </S.HeaderBar>
 )
 
 export default HeaderHome

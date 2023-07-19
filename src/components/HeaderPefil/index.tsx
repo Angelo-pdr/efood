@@ -1,4 +1,4 @@
-import { HeaderBar, Title } from './styles'
+import * as S from './styles'
 import logo from '../../asserts/images/logo.png'
 import banner from '../../asserts/images/Vector.png'
 import { useDispatch, useSelector } from 'react-redux'
@@ -15,15 +15,15 @@ const HeaderPerfil = () => {
   }
 
   return (
-    <HeaderBar style={{ backgroundImage: `url(${banner})` }}>
+    <S.HeaderBar style={{ backgroundImage: `url(${banner})` }}>
       <div className="container">
-        <Title>Restaurantes</Title>
+        <S.Title>Restaurantes</S.Title>
         <img src={logo} alt="logo" />
         <Button onClick={openCart}>
           <p>{items.length} produto(s) no carrinho</p>
         </Button>
       </div>
-    </HeaderBar>
+    </S.HeaderBar>
   )
 }
 

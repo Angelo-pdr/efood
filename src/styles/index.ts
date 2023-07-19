@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const cores = {
+export const colors = {
   bg: '#FFF8F2',
-  branca: '#FFF',
-  rosa: '#E66767',
-  bege: '#ffebd9'
+  white: '#FFF',
+  pink: '#E66767',
+  beige: '#ffebd9'
 }
 
 const GlobalCss = createGlobalStyle`
@@ -18,8 +18,8 @@ const GlobalCss = createGlobalStyle`
   }
 
   body{
-    background-color: ${cores.bg};
-    color: ${cores.rosa};
+    background-color: ${colors.bg};
+    color: ${colors.pink};
     max-width: 100%;
     height: 100vh;
   }

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { cores } from '../../styles/index'
+import { colors } from '../../styles/index'
 import { ButtonContainer } from '../Button/styles'
 
 export const HeaderBar = styled.header`
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: ${cores.bege};
+  background-color: ${colors.beige};
   width: 100%;
   max-height: 186px;
   height: 100%;
