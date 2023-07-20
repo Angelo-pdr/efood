@@ -8,7 +8,7 @@ import Button from '../Button'
 import * as S from './styles'
 
 import { RootState } from '../../store'
-import { clear } from '../../store/reduce/cart'
+import { clear, close } from '../../store/reduce/cart'
 import { usePurchaseMutation } from '../../services/api'
 
 type Props = {
@@ -90,6 +90,11 @@ const Checkout = ({ open, price }: Props) => {
     }
   })
 
+  const conclude = () => {
+    open(false)
+    dispatch(close())
+  }
+
   useEffect(() => {
     if (isSuccess) {
       dispatch(clear())
@@ -125,7 +130,7 @@ const Checkout = ({ open, price }: Props) => {
             Esperamos que desfrute de uma deliciosa e agradável experiência
             gastronômica. Bom apetite!
           </p>
-          <Button onClick={() => open(false)}>
+          <Button onClick={conclude}>
             <p>Concluir</p>
           </Button>
         </S.Card>

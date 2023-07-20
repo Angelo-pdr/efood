@@ -26,6 +26,13 @@ export const CartContainer = styled.div`
   &.is-open {
     display: flex;
   }
+
+  .empyt-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.beige};
+    text-align: center;
+  }
 `
 
 export const Sidebar = styled.aside`
