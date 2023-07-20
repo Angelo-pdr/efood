@@ -1,10 +1,12 @@
+import { useDispatch, useSelector } from 'react-redux'
+
+import Button from '../Button'
 import * as S from './styles'
+
+import { RootState } from '../../store'
+import { open } from '../../store/reduce/cart'
 import logo from '../../asserts/images/logo.png'
 import banner from '../../asserts/images/Vector.png'
-import { useDispatch, useSelector } from 'react-redux'
-import { open } from '../../store/reduce/cart'
-import Button from '../Button'
-import { RootState } from '../../store'
 
 const HeaderPerfil = () => {
   const { items } = useSelector((state: RootState) => state.cart)

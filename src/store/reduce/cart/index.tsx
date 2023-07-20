@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { CardapioProps } from '../../../pages/Home'
 
 type CardapioState = {
   items: CardapioProps[]
@@ -22,7 +21,6 @@ const CartSlice = createSlice({
       } else {
         alert('O pedido já esta no carrinho')
       }
-      console.log(state.items)
     },
     remover: (state, action: PayloadAction<number>) => {
       state.items = state.items.filter((item) => item.id !== action.payload)
@@ -32,9 +30,12 @@ const CartSlice = createSlice({
     },
     close: (state) => {
       state.isOpen = false
+    },
+    clear: (state) => {
+      state.items = []
     }
   }
 })
 
-export const { add, close, open, remover } = CartSlice.actions
+export const { add, close, open, remover, clear } = CartSlice.actions
 export default CartSlice.reducer

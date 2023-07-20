@@ -1,11 +1,13 @@
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
 import Button from '../Button'
 import * as S from './styles'
-import { useDispatch, useSelector } from 'react-redux'
-import { close, remover } from '../../store/reduce/cart'
+import Checkout from '../Checkout'
+
 import { RootState } from '../../store'
 import { formataPreco } from '../ProductList'
-import { useEffect, useState } from 'react'
-import Checkout from '../Checkout'
+import { close, remover } from '../../store/reduce/cart'
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootState) => state.cart)

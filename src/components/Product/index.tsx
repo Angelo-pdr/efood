@@ -1,4 +1,3 @@
-import { CardapioProps } from '../../pages/Home'
 import Button from '../Button'
 import * as S from './styles'
 
@@ -28,7 +27,7 @@ const Produtc = ({ cardapio, setModal }: Props) => {
         <S.Title>{cardapio.nome}</S.Title>
         <p>{getDescricao(cardapio.descricao)}</p>
       </S.AreaText>
-      <Button onClick={() => setModal(cardapio)}>
+      <Button type="button" onClick={() => setModal(cardapio)}>
         <p>Adicionar ao carrinho</p>
       </Button>
     </S.Card>

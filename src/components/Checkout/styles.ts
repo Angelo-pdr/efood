@@ -10,9 +10,10 @@ export const Card = styled.div`
   width: 100%;
   max-height: 100%;
   margin-bottom: 24px;
-
+  color: ${colors.beige};
   .flex {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,23 +27,29 @@ export const Card = styled.div`
     margin-bottom: 8px;
     height: 24px;
   }
+
+  .margin-bottom {
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 22px;
+  }
 `
 export const Title = styled.h1`
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 700;
-  color: ${colors.beige};
 `
 
 export const InpuitGroup = styled.div<InputProps>`
   flex: auto;
+  height: 100%;
   max-width: ${(props) => props.maxWidth || 'auto'};
   margin-bottom: 8px;
   label {
     font-size: 14px;
     margin-bottom: 8px;
     display: block;
-    color: ${colors.beige};
   }
 
   input {
@@ -53,5 +60,14 @@ export const InpuitGroup = styled.div<InputProps>`
     width: 100%;
     padding: 0px 8px;
     border: 1px solid ${colors.beige};
+
+    &.error {
+      border: 1px solid red;
+    }
+  }
+
+  small {
+    min-width: 200px;
+    height: 100%;
   }
 `

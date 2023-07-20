@@ -1,4 +1,3 @@
-import { string } from 'yup'
 import { ButtonContainer } from './styles'
 
 export type ButtonProps = {

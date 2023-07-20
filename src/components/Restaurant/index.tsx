@@ -1,8 +1,8 @@
-import * as S from './styles'
-import star from '../../asserts/images/star.png'
-import Tag from '../Tag'
-import { RestaurantProps } from '../../pages/Home'
 import Button from '../Button'
+import * as S from './styles'
+import Tag from '../Tag'
+
+import star from '../../asserts/images/star.png'
 
 type Props = {
   restaurante: RestaurantProps

@@ -1,14 +1,17 @@
 import { useState } from 'react'
-import { CardapioProps } from '../../pages/Home'
+import { useDispatch } from 'react-redux'
+
 import Product from '../Product'
 import * as S from './styles'
 import Button from '../Button'
+
 import close from '../../asserts/images/close.png'
-import { useDispatch } from 'react-redux'
 import { open, add } from '../../store/reduce/cart'
+import Loader from '../Loader'
 
 type Props = {
   restaurantes: CardapioProps[]
+  isLoading: boolean
 }
 
 export const formataPreco = (preco = 0) => {
@@ -18,7 +21,7 @@ export const formataPreco = (preco = 0) => {
   }).format(preco)
 }
 
-const ProdutcList = ({ restaurantes }: Props) => {
+const ProdutcList = ({ restaurantes, isLoading }: Props) => {
   const [modal, setModal] = useState<CardapioProps>()
   const dispatch = useDispatch()
 
@@ -26,6 +29,10 @@ const ProdutcList = ({ restaurantes }: Props) => {
     dispatch(add(modal!))
     setModal(undefined)
     dispatch(open())
+  }
+
+  if (isLoading) {
+    return <Loader />
   }
 
   return (
@@ -51,7 +58,7 @@ const ProdutcList = ({ restaurantes }: Props) => {
                 <h2>{modal.nome}</h2>
                 <p className="descricao">{modal.descricao}</p>
                 <p>Serve: {modal.porcao}</p>
-                <Button onClick={addToCart}>
+                <Button type="button" onClick={addToCart}>
                   <p>Adicionar ao carrinho - {formataPreco(modal.preco)}</p>
                 </Button>
               </S.AreaText>

@@ -6,14 +6,15 @@ import Hero from '../../components/Hero'
 import { useParams } from 'react-router-dom'
 import { useGetFeatureRevenueQuery } from '../../services/api'
 import Cart from '../../components/Cart'
+import Loader from '../../components/Loader'
 
 const Perfil = () => {
   const { id } = useParams()
 
-  const { data: revenue } = useGetFeatureRevenueQuery(id as string)
+  const { data: revenue, isLoading } = useGetFeatureRevenueQuery(id as string)
 
   if (!revenue) {
-    return <h1>carregando</h1>
+    return <Loader />
   }
 
   return (
@@ -21,7 +22,7 @@ const Perfil = () => {
       <Cart />
       <Header />
       <Hero restaurante={revenue} />
-      <ProdutcList restaurantes={revenue.cardapio} />
+      <ProdutcList restaurantes={revenue.cardapio} isLoading={isLoading} />
       <Footer />
     </>
   )
