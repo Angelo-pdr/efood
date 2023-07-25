@@ -7,12 +7,15 @@ export const HeaderBar = styled.header`
   background-repeat: no-repeat;
   background-color: ${colors.beige};
   width: 100%;
-  max-height: 186px;
-  height: 100%;
+  height: 186px;
   padding: 1.25rem 0px;
+  diplay: flex;
+  aling-items: center;
+  justify-content: end;
 
   @media (max-width: 850px) {
     padding: 1.25rem 0.5rem;
+    height: 100%;
   }
 
   .container {
@@ -20,14 +23,20 @@ export const HeaderBar = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    height: 100%;
 
     img {
-      width: 15%;
+      width: 125px;
     }
 
     @media (max-width: 850px) {
       width: 90%;
       text-align: center;
+
+      img {
+        width: 12%;
+      }
     }
   }
 

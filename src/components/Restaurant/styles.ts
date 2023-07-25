@@ -26,8 +26,9 @@ export const Card = styled.div`
     max-width: 121px;
     height: 26px;
     font-size: 12px;
+    font-weight: 700;
     background-color: ${colors.pink};
-    color: ${colors.white};
+    color: ${colors.beige};
     padding: 6px 4px;
     margin-left: 0.5rem;
   }
@@ -72,6 +73,7 @@ export const AreaText = styled.div`
 
   ${ButtonLink} {
     margin: 0px;
+    color: ${colors.beige};
   }
 `
 

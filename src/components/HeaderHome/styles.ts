@@ -6,8 +6,7 @@ export const HeaderBar = styled.header`
   width: 100%;
   max-height: 384px;
   height: 100%;
-  padding-top: 40px;
-  padding-bottom: 62px;
+  padding: 40px 0;
 
   @media (max-width: 840px) {
     padding: 20px 0px;
@@ -30,7 +29,7 @@ export const HeaderBar = styled.header`
 `
 
 export const Title = styled.h1`
-  margin-top: 8.7812rem;
+  margin-top: 138.5px;
   font-size: 36px;
 
   @media (max-width: 840px) {

@@ -14,7 +14,7 @@ export const Card = styled.div`
   justify-content: center;
   position: relative;
   background-color: ${colors.pink};
-  color: ${colors.white};
+  color: ${colors.beige};
 
   ${ButtonContainer} {
     width: 100%;

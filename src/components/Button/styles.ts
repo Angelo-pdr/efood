@@ -8,6 +8,6 @@ export const ButtonContainer = styled.button`
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
-  background-color: ${colors.white};
+  background-color: ${colors.beige};
   color: ${colors.pink};
 `

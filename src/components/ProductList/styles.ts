@@ -77,6 +77,8 @@ export const ModalContent = styled.div`
   }
 
   .container {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     column-gap: 24px;
@@ -84,13 +86,18 @@ export const ModalContent = styled.div`
     @media (max-width: 810px) {
       align-items: center;
       flex-direction: column;
-      row-gap: 24px;
+      row-gap: 15px;
+
+      img {
+        max-width: 280px;
+        max-height: 280px;
+      }
     }
 
     img {
       display: block;
       max-width: 280px;
-      max-height: 280px;
+      height: 280px;
     }
   }
 `
@@ -107,9 +114,13 @@ export const AreaText = styled.div`
       padding .5rem 0px;
     }
   }
+
   @media (max-width: 810px) {
     text-align: center;
+    font-size: 14px;
+    align-items: center;
   }
+
   ${ButtonContainer} {
     margin-top: 1rem;
     max-width: 218px;
