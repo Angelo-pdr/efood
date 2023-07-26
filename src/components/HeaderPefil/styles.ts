@@ -35,7 +35,7 @@ export const HeaderBar = styled.header`
       text-align: center;
 
       img {
-        width: 12%;
+        width: 60%;
       }
     }
   }

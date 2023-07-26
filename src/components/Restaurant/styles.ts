@@ -33,6 +33,7 @@ export const Card = styled.div`
     margin-left: 0.5rem;
   }
 `
+
 export const AreaImg = styled.div`
   position: relative;
   display: block;
@@ -53,8 +54,17 @@ export const AreaText = styled.div`
   border: 1px solid ${colors.pink};
   border-top: none;
   width: 100%;
-  height: auto;
+  height: 181px;
   padding: 8px;
+  position: relative;
+
+  @media (max-width: 980px) {
+    height: auto;
+
+    ${ButtonLink} {
+      position: static;
+    }
+  }
 
   img {
     width: 100%;
@@ -74,6 +84,13 @@ export const AreaText = styled.div`
   ${ButtonLink} {
     margin: 0px;
     color: ${colors.beige};
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+
+    @media (max-width: 980px) {
+      position: static;
+    }
   }
 `
 

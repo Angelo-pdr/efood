@@ -20,3 +20,9 @@ declare type RestaurantProps = {
   capa: string
   cardapio: CardapioProps[]
 }
+
+declare type ButtonProps = {
+  children: JSX.Element
+  onClick?: () => void
+  type?: 'button' | 'submit'
+}

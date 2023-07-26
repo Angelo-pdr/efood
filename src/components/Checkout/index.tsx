@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import InputMask from 'react-input-mask'
 import * as Yup from 'yup'
 
-import Button from '../Button'
 import * as S from './styles'
 
 import { RootState } from '../../store'
 import { clear, close } from '../../store/reduce/cart'
 import { usePurchaseMutation } from '../../services/api'
+import { isDisabled } from '@testing-library/user-event/dist/utils'
 
 type Props = {
   open: (arg: boolean) => void
@@ -101,6 +101,17 @@ const Checkout = ({ open, price }: Props) => {
     }
   }, [isSuccess, dispatch])
 
+  const IsDisabled = () => {
+    const IsTrue =
+      form.values.receiveName != '' &&
+      form.values.address != '' &&
+      form.values.city != '' &&
+      form.values.cep != '' &&
+      form.values.addressNumber != '' &&
+      form.values.addressNumber != ''
+    return IsTrue ? true : false
+  }
+
   const checkInputHasError = (fieldName: string) => {
     const isTouched = fieldName in form.touched
     const isInvalid = fieldName in form.errors
@@ -130,9 +141,9 @@ const Checkout = ({ open, price }: Props) => {
             Esperamos que desfrute de uma deliciosa e agradável experiência
             gastronômica. Bom apetite!
           </p>
-          <Button onClick={conclude}>
+          <S.Button onClick={conclude}>
             <p>Concluir</p>
-          </Button>
+          </S.Button>
         </S.Card>
       ) : (
         <form onSubmit={form.handleSubmit}>
@@ -210,12 +221,12 @@ const Checkout = ({ open, price }: Props) => {
                 </S.InpuitGroup>
               </div>
               <div className="buttons">
-                <Button type="submit">
+                <S.Button type="submit">
                   <p>Finalizar pagamento</p>
-                </Button>
-                <Button type="button" onClick={() => setPayWithCard(false)}>
+                </S.Button>
+                <S.Button type="button" onClick={() => setPayWithCard(false)}>
                   <p>Voltar para a edição de endereço</p>
-                </Button>
+                </S.Button>
               </div>
             </S.Card>
           ) : (
@@ -298,12 +309,24 @@ const Checkout = ({ open, price }: Props) => {
                 />
               </S.InpuitGroup>
               <div className="buttons">
-                <Button type="button" onClick={() => setPayWithCard(true)}>
-                  <p>Continuar com o pagamento</p>
-                </Button>
-                <Button type="button" onClick={() => open(false)}>
+                {IsDisabled() ? (
+                  <S.Button type="submit" onClick={() => setPayWithCard(true)}>
+                    <p>Continuar com o pagamento</p>
+                  </S.Button>
+                ) : (
+                  <S.Button
+                    disabled
+                    type="submit"
+                    className="disabled"
+                    onClick={() => setPayWithCard(true)}
+                  >
+                    <p>Continuar com o pagamento</p>
+                  </S.Button>
+                )}
+
+                <S.Button type="button" onClick={() => open(false)}>
                   <p>Voltar para o carrinho</p>
-                </Button>
+                </S.Button>
               </div>
             </S.Card>
           )}

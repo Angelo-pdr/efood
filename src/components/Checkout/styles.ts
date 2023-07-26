@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
-import { ButtonContainer } from '../Button/styles'
 
 type InputProps = {
   maxWidth?: string
@@ -21,11 +20,6 @@ export const Card = styled.div`
 
   .buttons {
     margin-top: 24px;
-  }
-
-  ${ButtonContainer} {
-    margin-bottom: 8px;
-    height: 24px;
   }
 
   .margin-bottom {
@@ -69,5 +63,22 @@ export const InpuitGroup = styled.div<InputProps>`
   small {
     min-width: 200px;
     height: 100%;
+  }
+`
+export const Button = styled.button`
+  display: inline-block;
+  border: none;
+  width: 100%;
+  height: 24px;
+  margin-bottom: 8px;
+  padding: 4px 0px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: ${colors.beige};
+  color: ${colors.pink};
+
+  &.disabled {
+    opacity: 0.7;
   }
 `
