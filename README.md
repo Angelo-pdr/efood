@@ -1,11 +1,14 @@
 <h1>EFOOD</h1>
 
 <p>
-   O efood é um site inspirado no iFood que oferece uma ampla lista de restaurantes para os usuários escolherem. Cada restaurante possui sua própria página com uma listagem detalhada dos pedidos disponíveis.
+    O efood é um site inspirado no iFood que oferece uma ampla lista de restaurantes para os usuários escolherem. Cada restaurante possui sua própria página com uma listagem detalhada dos pedidos disponíveis.
    <br />
-   Uma das características do efood é sua interface intuitiva e totalmente responsiva. Para que seja amigável e fácil de usar tanto em dispositivos móveis quanto em computadores, proporcionando uma experiência agradável aos usuários.
    <br />
-   Para viabilizar a atualização e integração contínua das informações, utilizamos uma API eficiente para a inserção dos dados. Isso permite que os usuários tenham acesso a opções de restaurantes e pedidos sempre atualizadas.
+    Uma das características do efood é sua interface intuitiva e totalmente responsiva. Para que seja amigável e fácil de usar tanto em dispositivos móveis quanto em computadores, proporcionando uma experiência agradável aos usuários.
+   <br />
+   <br />
+    Para viabilizar a atualização e integração contínua das informações, utilizamos uma API eficiente para a inserção dos dados. Isso permite que os usuários tenham acesso a opções de restaurantes e pedidos sempre atualizadas.
+   <br />
    <br />
     Realizamos a validação dos dados do cliente, especialmente ao incluir os dados do cartão de pagamento. Uma vez que verificamos que todas as informações necessárias foram preenchidas corretamente, procedemos ao envio do pedido para o restaurante selecionado.
 </p>
