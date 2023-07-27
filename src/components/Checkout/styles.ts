@@ -79,6 +79,6 @@ export const Button = styled.button`
   color: ${colors.pink};
 
   &.disabled {
-    opacity: 0.7;
+    opacity: 0.4;
   }
 `
