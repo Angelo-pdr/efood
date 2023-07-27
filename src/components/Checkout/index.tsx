@@ -9,7 +9,6 @@ import * as S from './styles'
 import { RootState } from '../../store'
 import { clear, close } from '../../store/reduce/cart'
 import { usePurchaseMutation } from '../../services/api'
-import { isDisabled } from '@testing-library/user-event/dist/utils'
 
 type Props = {
   open: (arg: boolean) => void
@@ -101,15 +100,26 @@ const Checkout = ({ open, price }: Props) => {
     }
   }, [isSuccess, dispatch])
 
-  const IsDisabled = () => {
-    const IsTrue =
-      form.values.receiveName != '' &&
-      form.values.address != '' &&
-      form.values.city != '' &&
-      form.values.cep != '' &&
-      form.values.addressNumber != '' &&
-      form.values.addressNumber != ''
-    return IsTrue ? true : false
+  const isDisabled = (text: 'address' | 'card') => {
+    if (text == 'address') {
+      const IsTrue =
+        form.values.receiveName != '' &&
+        form.values.address != '' &&
+        form.values.city != '' &&
+        form.values.cep != '' &&
+        form.values.addressNumber != '' &&
+        form.values.addressNumber != ''
+      return IsTrue ? true : false
+    }
+    if (text == 'card') {
+      const IsTrue =
+        form.values.cardDisplayName != '' &&
+        form.values.cardCode != '' &&
+        form.values.cardNumber != '' &&
+        form.values.expiresMoth != '' &&
+        form.values.expiresYear != ''
+      return IsTrue ? true : false
+    }
   }
 
   const checkInputHasError = (fieldName: string) => {
@@ -221,9 +231,15 @@ const Checkout = ({ open, price }: Props) => {
                 </S.InpuitGroup>
               </div>
               <div className="buttons">
-                <S.Button type="submit">
-                  <p>Finalizar pagamento</p>
-                </S.Button>
+                {isDisabled('card') ? (
+                  <S.Button type="submit">
+                    <p>Finalizar pagamento</p>
+                  </S.Button>
+                ) : (
+                  <S.Button type="submit" className="disabled">
+                    <p>Finalizar pagamento</p>
+                  </S.Button>
+                )}
                 <S.Button type="button" onClick={() => setPayWithCard(false)}>
                   <p>Voltar para a edição de endereço</p>
                 </S.Button>
@@ -309,7 +325,7 @@ const Checkout = ({ open, price }: Props) => {
                 />
               </S.InpuitGroup>
               <div className="buttons">
-                {IsDisabled() ? (
+                {isDisabled('address') ? (
                   <S.Button type="submit" onClick={() => setPayWithCard(true)}>
                     <p>Continuar com o pagamento</p>
                   </S.Button>
